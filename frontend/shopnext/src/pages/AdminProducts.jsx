@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import "../styles/AdminProducts.css";
 
-const API = "http://localhost:3000/api/products";
+const API = "https://shopnest-ecommerce-ek0w.onrender.com/api/products";
 
 const AdminProducts = () => {
   const [products, setProducts] = useState([]);

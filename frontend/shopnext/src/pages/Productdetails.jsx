@@ -24,7 +24,7 @@ const Product = () => {
     const fetchProduct = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/products/${id}`
+          `https://shopnest-ecommerce-ek0w.onrender.com/api/products/${id}`
         );
         setProduct(res.data);
       } catch (error) {
@@ -39,7 +39,7 @@ const Product = () => {
   const fetchReviews = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/products/${id}/reviews`
+        `https://shopnest-ecommerce-ek0w.onrender.com/api/products/${id}/reviews`
       );
 
       setReviews(res.data.reviews || []);
@@ -78,7 +78,7 @@ const Product = () => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        `http://localhost:3000/api/products/${id}/reviews`,
+        `https://shopnest-ecommerce-ek0w.onrender.com/api/products/${id}/reviews`,
         {
           rating,
           comment
@@ -99,7 +99,7 @@ const Product = () => {
 
       // Refresh product average rating
       const productRes = await axios.get(
-        `http://localhost:3000/api/products/${id}`
+        `https://shopnest-ecommerce-ek0w.onrender.com/api/products/${id}`
       );
       setProduct(productRes.data);
 

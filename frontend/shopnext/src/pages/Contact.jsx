@@ -13,7 +13,7 @@ const Contact = () => {
     try {
 
       const response = await axios.post(
-        "http://localhost:3000/api/contact",
+        "https://shopnest-ecommerce-ek0w.onrender.com/api/contact",
         {
           name,
           email,

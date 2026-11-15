@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/AdminOrders.css";
 
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://shopnest-ecommerce-ek0w.onrender.com/api";
 
 const AdminOrders = () => {
   const [orders, setOrders] = useState([]);

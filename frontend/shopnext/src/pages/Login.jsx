@@ -60,7 +60,7 @@ const Login = () => {
 
       // Backend ko login request
       const res = await axios.post(
-        "http://localhost:3000/api/login",
+        "https://shopnest-ecommerce-ek0w.onrender.com/api/login",
         formData
       );
 

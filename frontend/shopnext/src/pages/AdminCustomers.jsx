@@ -14,7 +14,7 @@ const AdminCustomers = () => {
             const token = localStorage.getItem("token");
 
             const response = await axios.get(
-                "http://localhost:3000/api/users",
+                "https://shopnest-ecommerce-ek0w.onrender.com/api/users",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

@@ -42,7 +42,7 @@ const Register = () => {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:3000/api/register",
+        "https://shopnest-ecommerce-ek0w.onrender.com/api/register",
         formData
       );
 

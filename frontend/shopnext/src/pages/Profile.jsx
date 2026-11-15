@@ -95,7 +95,7 @@ const Profile = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.put(
-        "http://localhost:3000/api/users/profile",
+        "https://shopnest-ecommerce-ek0w.onrender.com/api/users/profile",
         {
           name: formData.name,
           email: formData.email
@@ -146,7 +146,7 @@ const Profile = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.put(
-        "http://localhost:3000/api/users/change-password",
+        "https://shopnest-ecommerce-ek0w.onrender.com/api/users/change-password",
         passwordData,
         {
           headers: {

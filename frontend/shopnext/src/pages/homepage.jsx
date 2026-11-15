@@ -25,7 +25,7 @@ const Homepage = () => {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/api/products"
+          "https://shopnest-ecommerce-ek0w.onrender.com/api/products"
         );
         setProducts(res.data);
       } catch (err) {

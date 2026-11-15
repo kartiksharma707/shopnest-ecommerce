@@ -18,7 +18,7 @@ import {
 import { Link } from "react-router-dom";
 import "../styles/AdminDashboard.css";
 
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://shopnest-ecommerce-ek0w.onrender.com/api";
 
 const AdminDashboard = () => {
   const [analytics, setAnalytics] = useState({

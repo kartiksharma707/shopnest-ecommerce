@@ -21,7 +21,7 @@ const MyOrders = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/orders/myorders",
+          "https://shopnest-ecommerce-ek0w.onrender.com/api/orders/myorders",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

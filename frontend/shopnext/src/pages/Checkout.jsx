@@ -88,7 +88,7 @@ const Checkout = () => {
       if (paymentMethod === "Razorpay") {
 
         const paymentResponse = await axios.post(
-          "http://localhost:3000/api/payment/create-order",
+          "https://shopnest-ecommerce-ek0w.onrender.com/api/payment/create-order",
           {
             amount: totalPrice,
             currency: "INR",
@@ -123,7 +123,7 @@ const Checkout = () => {
 
             try {
               const verifyResponse = await axios.post(
-                "http://localhost:3000/api/payment/verify",
+                "https://shopnest-ecommerce-ek0w.onrender.com/api/payment/verify",
                 {
                   razorpay_order_id: response.razorpay_order_id,
                   razorpay_payment_id: response.razorpay_payment_id,
@@ -179,7 +179,7 @@ const Checkout = () => {
       // =========================
 
       const response = await axios.post(
-        "http://localhost:3000/api/orders",
+        "https://shopnest-ecommerce-ek0w.onrender.com/api/orders",
         {
           orderItems,
           shippingAddress,
