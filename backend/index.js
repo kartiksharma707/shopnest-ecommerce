@@ -6,7 +6,7 @@ const express = require("express");
 const app = express();
 
 const cors = require("cors");
-const bodyParser = require("body-parser");
+
 const connectDB = require("./config/db");
 const dotenv = require("dotenv");
 const router = require("./routes/router");
@@ -15,16 +15,22 @@ const analyticsRouter = require("./routes/Ananlytics");
 dotenv.config();
 
 // CORS SETTINGS
+
 app.use(cors({
-    origin: ["http://localhost:5173", "http://127.0.0.1:5173"],
+    origin: [
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://kartiksharma707.github.io"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
 }));
 
+
 // BODY PARSER
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 // DATABASE
 connectDB();
