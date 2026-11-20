@@ -5,6 +5,8 @@ import React, {
   useState,
 } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { useDispatch } from "react-redux";
 
 import {
@@ -16,6 +18,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [user, setUser] = useState(() => {
     const savedUser = localStorage.getItem("user");
@@ -50,7 +53,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem("user");
     localStorage.removeItem("token");
 
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   // Token Expiry Check
